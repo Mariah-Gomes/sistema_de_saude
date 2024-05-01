@@ -16,7 +16,7 @@ int main() {
         if(opcao == 1){
             printf("Cadastrar...\n");
         }else if(opcao == 2){
-            printf("Atendimento...\n");
+            atendimento();
         }else if(opcao == 3){
             printf("Pesquisa...\n");
         }else if(opcao == 4){

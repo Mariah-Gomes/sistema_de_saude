@@ -5,6 +5,7 @@
 #include "funcoes.h"
 
 int main() {
+    Lista *lista = inicializa_lista();
 
     int opcao;
 
@@ -14,7 +15,7 @@ int main() {
         scanf("%d", &opcao);
         printf("\n");
         if(opcao == 1){
-            printf("Cadastrar...\n");
+            cadastrar(lista);
         }else if(opcao == 2){
             printf("Atendimento...\n");
         }else if(opcao == 3){
@@ -29,6 +30,7 @@ int main() {
         }else{
             printf("Erro, escolha novamente!\n");
         }
+        printf("\n");
     }
 
     return 0;

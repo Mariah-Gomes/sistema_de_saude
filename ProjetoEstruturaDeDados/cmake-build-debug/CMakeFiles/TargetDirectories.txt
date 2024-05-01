@@ -1,0 +1,3 @@
+C:/Users/iago2/CLionProjects/ProjetoEstruturaDeDados/cmake-build-debug/CMakeFiles/ProjetoEstruturaDeDados.dir
+C:/Users/iago2/CLionProjects/ProjetoEstruturaDeDados/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/iago2/CLionProjects/ProjetoEstruturaDeDados/cmake-build-debug/CMakeFiles/rebuild_cache.dir

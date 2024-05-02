@@ -1,5 +1,7 @@
 #include "struct.h"
 
+// funções menu:
+
 void menu();
 
 void menu_cadastrar();
@@ -8,9 +10,14 @@ void menu_atendimento();
 
 void sobre();
 
-int verificar_paciente(Lista *lista, char rg[10]);
+
+// funções programa:
 
 Lista *inicializa_lista();
+
+int verificar_paciente(Lista *lista, char rg[10]);
+
+void inserir_paciente(Lista *lista, char nome[100], int idade, char rg[10], int dia, int mes, int ano);
 
 void cadastrar_novo_paciente(Lista *lista);
 
@@ -35,3 +42,9 @@ void enfileirar(Lista *lista, Fila *f);
 void desenfileirar(Fila *f);
 
 void mostrar(Fila *f);
+
+void carregar_arquivo(Lista *lista);
+
+void salvar_arquivo(Lista *lista);
+
+void carregar_salvar(Lista *lista);

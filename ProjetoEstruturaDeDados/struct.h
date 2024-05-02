@@ -27,17 +27,16 @@ typedef struct {
     int qtde;
 }Lista;
 
-
 // STRUCTS PARA A FILA DINÂMICA (ATENDIMENTO)
 // Celula...
 typedef struct EFila{
-  struct EFila *anterior;
-  struct EFila *proximo;
-  Registro dados;
+    struct EFila *anterior;
+    struct EFila *proximo;
+    Registro dados;
 }EFila;
 
 typedef struct{
-  EFila *head;
-  EFila *tail;
-  int qtde;
+    EFila *head;
+    EFila *tail;
+    int qtde;
 }Fila;

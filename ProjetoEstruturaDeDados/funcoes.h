@@ -1,15 +1,12 @@
 #include "struct.h"
 
-// funções menu:
-
 void menu();
 
 void menu_cadastrar();
 
+void menu_atendimento();
+
 void sobre();
-
-
-// funções programa:
 
 int verificar_paciente(Lista *lista, char rg[10]);
 
@@ -26,3 +23,15 @@ void atualizar_dados_paciente(Lista *lista);
 void remover_paciente(Lista *lista);
 
 void cadastrar(Lista *lista);
+
+void atendimento(Lista *lista);
+
+Fila *criar_fila();
+
+EFila *criar_efila(Registro dados);
+
+void enfileirar(Lista *lista, Fila *f);
+
+void desenfileirar(Fila *f);
+
+void mostrar(Fila *f);

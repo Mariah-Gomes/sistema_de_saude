@@ -380,11 +380,21 @@ void salvar_arquivo(Lista *lista){
     }
 
     ELista *atual = lista->inicio;
+    Lista *lista_provisoria = inicializa_lista();
 
     while (atual != NULL){
-        fprintf(arquivo, "%s %d %s %d %d %d\n", atual->dados.nome, atual->dados.idade, atual->dados.rg,
-                atual->dados.entrada.dia, atual->dados.entrada.mes, atual->dados.entrada.ano);
+        inserir_paciente(lista_provisoria, atual->dados.nome, atual->dados.idade, atual->dados.rg,
+                         atual->dados.entrada.dia, atual->dados.entrada.mes, atual->dados.entrada.ano);
         atual = atual->proximo;
+    }
+
+    ELista *atual_provisorio = lista_provisoria->inicio;
+
+    while (atual_provisorio != NULL){
+        fprintf(arquivo, "%s %d %s %d %d %d\n", atual_provisorio->dados.nome,
+                atual_provisorio->dados.idade, atual_provisorio->dados.rg, atual_provisorio->dados.entrada.dia,
+                atual_provisorio->dados.entrada.mes, atual_provisorio->dados.entrada.ano);
+        atual_provisorio = atual_provisorio->proximo;
     }
 
     fclose(arquivo);

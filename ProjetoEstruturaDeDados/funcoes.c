@@ -267,15 +267,20 @@ void enfileirar(Lista *lista, Fila *f){
         printf("\n");
         return;
     }
+
     else{
         EFila *nova = criar_efila(atual->dados);
         if(f->qtde == 0){
             f->head = nova;
         }
+        //else if(atual->dados.rg)
         else{
             f->tail->proximo = nova;
             nova->anterior = f->tail;
         }
+        printf("\n");
+        printf("Paciente Entrou na Fila");
+        printf("\n");
         f->tail = nova;
         f->qtde++;
     }
@@ -298,6 +303,9 @@ int desenfileirar(Fila *f){
     f->head = proximo;
     f->qtde--;
     free(endereco);
+    printf("\n");
+    printf("Paciente Saiu da Fila");
+    printf("\n");
     return guardar;
 }
 
@@ -328,7 +336,6 @@ void atendimento(Lista *lista){
         }
         else if(opcao_atendimento == 2){
             desenfileirar(f);
-            printf("Paciente saiu da fila\n");
             printf("\n");
         }
         else if(opcao_atendimento == 3){

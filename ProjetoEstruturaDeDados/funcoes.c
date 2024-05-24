@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-// funções menu:
+// FUNÇÕES MENU
 
+// OPÇÕES DO MENU PRINCIPAL
 void menu() {
     printf("Menu:\n");
     printf("1. Cadastrar\n");
@@ -15,6 +16,7 @@ void menu() {
     printf("6. Sair\n");
 }
 
+// OPÇÕES PARA QUANDO O USUÁRIO ENTRA NA OPÇÃO DO MENU CADASTRAR
 void menu_cadastrar() {
     printf("Operacoes:\n");
     printf("1. Cadastrar novo paciente\n");
@@ -25,6 +27,7 @@ void menu_cadastrar() {
     printf("6. Voltar para o menu\n");
 }
 
+// OPÇÕES PARA QUANDO O USUÁRIO ENTRA NA OPÇÃO DO MENU ATENDIMENTO
 void menu_atendimento() {
     printf("Operacoes:\n");
     printf("1. Enfileirar paciente\n");
@@ -33,6 +36,7 @@ void menu_atendimento() {
     printf("4. Voltar para o menu\n");
 }
 
+// OPÇÕES PARA QUANDO O USUÁRIO ENTRA NA OPÇÃO DO MENU PESQUISA
 void menu_pesquisar() {
     printf("Operacoes:\n");
     printf("1. Ordenar por ano\n");
@@ -42,6 +46,7 @@ void menu_pesquisar() {
     printf("5. Voltar para o menu\n");
 }
 
+// OPÇÕES PARA QUANDO O USUÁRIO ENTRA NA OPÇÃO DO MENU CARREGAR/SALVAR
 void menu_carregar_salvar() {
     printf("Operacoes:\n");
     printf("1. Carregar arquivo\n");
@@ -49,6 +54,7 @@ void menu_carregar_salvar() {
     printf("3. Voltar para o menu\n");
 }
 
+// FUNÇÃO PARA QUANDO O USUÁRIO SELECIONA A OPÇÃO SOBRE
 void sobre() {
     printf("Desenvolvedores:\n");
     printf("Nome: Iago Rosa de Oliveira   R.A.: 24.123.056-4\n");
@@ -61,9 +67,8 @@ void sobre() {
     printf("\n");
 }
 
-
-// funções programa:
-
+// FUNÇÕES PROGRAMA
+// FUNÇÃO PARA CRIAR UMA LISTA
 Lista *inicializa_lista() {
     Lista *lista = malloc(sizeof(Lista));
     lista->inicio = NULL;
@@ -71,6 +76,7 @@ Lista *inicializa_lista() {
     return lista;
 }
 
+// FUNÇÃO PARA VERIFICAR SE O PACIENTE EXISTE
 int verificar_paciente(Lista *lista, char rg[10]) {
     ELista *atual = lista->inicio;
     while (atual != NULL && strcmp(atual->dados.rg, rg) != 0) {
@@ -82,6 +88,7 @@ int verificar_paciente(Lista *lista, char rg[10]) {
     return 1;
 }
 
+// FUNÇÃO PARA INSERIR PACIENTES NA LISTA
 void inserir_paciente(Lista *lista, char nome[100], int idade, char rg[10], int dia, int mes, int ano) {
     if (verificar_paciente(lista, rg) == 1) {
         return;
@@ -104,6 +111,7 @@ void inserir_paciente(Lista *lista, char nome[100], int idade, char rg[10], int 
     lista->qtde++;
 }
 
+// FUNÇÃO PARA CADASTRAR UM NOVO PACIENTE
 void cadastrar_novo_paciente(Lista *lista) {
     char nome[100];
     int idade;
@@ -131,6 +139,7 @@ void cadastrar_novo_paciente(Lista *lista) {
     inserir_paciente(lista, nome, idade, rg, dia, mes, ano);
 }
 
+// FUNÇÃO PARA CONSULTAR SE TEM UM PACIENTE ESPECIFÍCO
 void consultar_paciente_cadastrado(Lista *lista) {
     char rg[10];
     printf("Digite o RG do paciente:\n");
@@ -154,6 +163,7 @@ void consultar_paciente_cadastrado(Lista *lista) {
     }
 }
 
+// FUNÇÃO PARA MOSTRAR A LISTA COMPLETA DE PACIENTES
 void mostrar_lista_completa(Lista *lista) {
     ELista *atual = lista->inicio;
     if (atual == NULL) {
@@ -171,6 +181,7 @@ void mostrar_lista_completa(Lista *lista) {
     }
 }
 
+// FUNÇÃO PARA ATUALIZAR DADOS DE PACIENTE
 void atualizar_dados_paciente(Lista *lista) {
     char rg[10];
     printf("Digite o RG do paciente:\n");
@@ -192,6 +203,7 @@ void atualizar_dados_paciente(Lista *lista) {
     }
 }
 
+// FUNÇÃO PARA REMOVER UM PACIENTE
 void remover_paciente(Lista *lista) {
     char rg[10];
     printf("Digite o RG do paciente:\n");
@@ -220,6 +232,7 @@ void remover_paciente(Lista *lista) {
     printf("\n");
 }
 
+//FUNÇÃO DE ENTRAR NO MENU DE CADASTRAR 
 void cadastrar(Lista *lista) {
     int opcao;
 
@@ -247,6 +260,7 @@ void cadastrar(Lista *lista) {
     }
 }
 
+// FUNÇÃO DE CRIAR FILA
 Fila *criar_fila() {
     Fila *f = malloc(sizeof(Fila));
     f->head = NULL;
@@ -255,6 +269,7 @@ Fila *criar_fila() {
     return f;
 }
 
+// FUNÇÃO DE CRIAR CÉLULA DA FILA
 EFila *criar_efila(Registro dados) {
     EFila *ef = malloc(sizeof(EFila));
     ef->anterior = NULL;
@@ -263,6 +278,7 @@ EFila *criar_efila(Registro dados) {
     return ef;
 }
 
+// FUNÇÃO DE ENFILEIRAR OS PACIENTES DA FILA
 void enfileirar(Lista *lista, Fila *f) {
     ELista *atual = lista->inicio;
     char rg_desejado[10];
@@ -281,7 +297,6 @@ void enfileirar(Lista *lista, Fila *f) {
         if (f->qtde == 0) {
             f->head = nova;
         }
-            //else if(atual->dados.rg)
         else {
             f->tail->proximo = nova;
             nova->anterior = f->tail;
@@ -294,6 +309,7 @@ void enfileirar(Lista *lista, Fila *f) {
     }
 }
 
+// FUNÇÃO PARA DESENFILEIRAR PACIENTES DA FILA
 int desenfileirar(Fila *f) {
     if (f->qtde == 0) {
         return -1;
@@ -316,6 +332,7 @@ int desenfileirar(Fila *f) {
     return guardar;
 }
 
+// FUNÇÃO PARA MOSTRAR A FILA
 void mostrar(Fila *f) {
     EFila *atual = f->head;
     while (atual != NULL) {
@@ -328,6 +345,7 @@ void mostrar(Fila *f) {
     }
 }
 
+// FUNÇÃO DE ENTRAR NO MENU DE ATENDIMENTO
 void atendimento(Lista *lista) {
     Fila *f = criar_fila();
     while (1) {
@@ -355,10 +373,7 @@ void atendimento(Lista *lista) {
     }
 }
 
-// AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-// AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-// AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
-
+// FUNÇÃO PARA FAZER A ROTAÇÃO PARA A ESQUERDA NO BALANCEAMENTO DA ÁRVORE BINÁRIA
 void RotacaoEsquerda(ABB *arvore, EABB *x) {
     EABB *pai = x->pai;
     EABB *y = x->dir;
@@ -381,6 +396,7 @@ void RotacaoEsquerda(ABB *arvore, EABB *x) {
     }
 }
 
+// FUNÇÃO PARA FAZER A ROTAÇÃO PARA A DIREITA NO BALANCEAMENTO DA ÁRVORE BINÁRIA
 void RotacaoDireita(ABB *arvore, EABB *y) {
     EABB *pai = y->pai;
     EABB *x = y->esq;
@@ -419,6 +435,7 @@ int altura(EABB *x) {
 
 int fatorBalanceamento(EABB *x) { return altura(x->dir) - altura(x->esq); }
 
+// FUNÇÃO QUE REALIZA O BALANCEAMENTO DA ÁRVORE
 void balanceie(ABB *arvore, EABB *x) {
     if (fatorBalanceamento(x) >= 2 && fatorBalanceamento(x->dir) >= 0) {
         RotacaoEsquerda(arvore, x);
@@ -433,6 +450,7 @@ void balanceie(ABB *arvore, EABB *x) {
     }
 }
 
+// FUNÇÃO DE INSERIR OS VALORES NA ÁRVORE
 int insere(ABB *arvore, Registro dados, int valor) {
     EABB *novo = malloc(sizeof(EABB));
     novo->dados = dados;
@@ -473,52 +491,7 @@ int insere(ABB *arvore, Registro dados, int valor) {
     return 1;
 }
 
-//int remover(ABB *arvore, EABB *x) {
-//    int filhos = 0;
-//
-//    if (x != NULL && x->esq != NULL) {filhos++;}
-//    if (x != NULL && x->dir != NULL) {filhos++;}
-//
-//    EABB *pai = x->pai;
-//    if (filhos == 0) {
-//        if (pai != NULL) {
-//            if (pai->esq == x) {
-//                pai->esq = NULL;
-//            } else {
-//                pai->dir = NULL;
-//            }
-//        } else {
-//            arvore->raiz = NULL;
-//        }
-//        arvore->qtde--;
-//    } else if (filhos == 1) {
-//        EABB *filho = x->esq;
-//        if (filho == NULL)
-//            filho = x->dir;
-//
-//        if (pai == NULL)
-//            arvore->raiz = filho;
-//        else {
-//            if (pai->esq == x)
-//                pai->esq = filho;
-//            else
-//                pai->dir = filho;
-//        }
-//        filho->pai = pai;
-//        arvore->qtde--;
-//    } else {
-//        EABB *sucessor = x;
-//        sucessor = sucessor->dir;
-//        while (sucessor->esq != NULL)
-//            sucessor = sucessor->esq;
-//        x->dados = sucessor->dados;
-//        x->valor = sucessor->valor;
-//        return remover(arvore, sucessor);
-//    }
-//
-//    return 1;
-//}
-
+// FUNÇÃO PARA IMPRIMIR A ÁRVORE NA ORDEM
 void imprimeInOrdem(EABB *raiz) {
     if (raiz != NULL) {
         imprimeInOrdem(raiz->esq);
@@ -531,6 +504,7 @@ void imprimeInOrdem(EABB *raiz) {
     }
 }
 
+// FUNÇÃO PARA ORDERNAR A ÁRVORE POR ANO
 void ordenar_por_ano(Lista *lista, ABB *arvore) {
     ELista *atual = lista->inicio;
     while (atual != NULL) {
@@ -540,6 +514,7 @@ void ordenar_por_ano(Lista *lista, ABB *arvore) {
     imprimeInOrdem(arvore->raiz);
 }
 
+// FUNÇÃO PARA ORDERNAR A ÁRVORE POR MÊS
 void ordenar_por_mes(Lista *lista, ABB *arvore) {
     ELista *atual = lista->inicio;
     while (atual != NULL) {
@@ -549,6 +524,7 @@ void ordenar_por_mes(Lista *lista, ABB *arvore) {
     imprimeInOrdem(arvore->raiz);
 }
 
+// FUNÇÃO PARA ORDERNAR A ÁRVORE POR DIA
 void ordenar_por_dia(Lista *lista, ABB *arvore) {
     ELista *atual = lista->inicio;
     while (atual != NULL) {
@@ -558,6 +534,7 @@ void ordenar_por_dia(Lista *lista, ABB *arvore) {
     imprimeInOrdem(arvore->raiz);
 }
 
+// FUNÇÃO PARA ORDERNAR A ÁRVORE POR IDADE
 void ordenar_por_idade(Lista *lista, ABB *arvore) {
     ELista *atual = lista->inicio;
     while (atual != NULL) {
@@ -567,6 +544,7 @@ void ordenar_por_idade(Lista *lista, ABB *arvore) {
     imprimeInOrdem(arvore->raiz);
 }
 
+// FUNÇÃO DE ENTRAR NO MENU DE PESQUISA
 void pesquisar(Lista *lista) {
     ABB *arvore = malloc(sizeof(ABB));
     arvore->raiz = NULL;
@@ -596,6 +574,7 @@ void pesquisar(Lista *lista) {
     }
 }
 
+// FUNÇÃO PARA CARREGAR UM ARQUIVO
 void carregar_arquivo(Lista *lista) {
     FILE *arquivo;
 
@@ -620,6 +599,7 @@ void carregar_arquivo(Lista *lista) {
     printf("Arquivo carregado!\n");
 }
 
+// FUNÇÃO PARA SALVAR UM ARQUIVO
 void salvar_arquivo(Lista *lista) {
     FILE *arquivo;
 
@@ -653,6 +633,7 @@ void salvar_arquivo(Lista *lista) {
     printf("Arquivo salvo!\n");
 }
 
+// FUNÇÃO DE ENTRAR NO MENU DE CARREGAR OU SALVAR
 void carregar_salvar(Lista *lista) {
     int opcao;
 

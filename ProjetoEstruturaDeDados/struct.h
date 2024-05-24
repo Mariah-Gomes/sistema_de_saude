@@ -1,4 +1,4 @@
-// structs para pacientes:
+// STRUCTS PARA PACIENTES
 
 typedef struct {
     int dia;
@@ -14,33 +14,38 @@ typedef struct {
 }Registro;
 
 
-// structs para funções:
+// STRUCTS PARA AS FUNÇÕES
 
-// Celula...
+// STRUCTS PARA A LISTA DINÂMICA (CADASTRO) 
+// CÉLULA
 typedef struct ELista{
     Registro dados;
     struct ELista *proximo;
 }ELista;
 
+// ESTRUTURA
 typedef struct {
     ELista *inicio;
     int qtde;
 }Lista;
 
 // STRUCTS PARA A FILA DINÂMICA (ATENDIMENTO)
-// Celula...
+// CÉLULA
 typedef struct EFila{
     struct EFila *anterior;
     struct EFila *proximo;
     Registro dados;
 }EFila;
 
+// ESTRUTURA
 typedef struct{
     EFila *head;
     EFila *tail;
     int qtde;
 }Fila;
 
+// STRUCTS PARA A ÁRVORE BINÁRIA (PESQUISA)
+// CÉLULA
 typedef struct EABB{
     Registro dados;
     struct EABB *esq;
@@ -49,6 +54,7 @@ typedef struct EABB{
     int valor;
 }EABB;
 
+// ESTRUTURA
 typedef struct {
     EABB *raiz;
     int qtde;

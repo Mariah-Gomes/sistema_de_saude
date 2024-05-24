@@ -5,10 +5,12 @@
 #include "funcoes.h"
 
 int main() {
+    // Inícia a lista
     Lista *lista = inicializa_lista();
 
     int opcao;
 
+    // Menu principal, onde aparece todas as opções do Menu
     while(1){
         menu();
         printf("Selecione uma opcao: ");

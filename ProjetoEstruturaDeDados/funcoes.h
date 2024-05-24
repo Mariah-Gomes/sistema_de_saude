@@ -43,6 +43,34 @@ void desenfileirar(Fila *f);
 
 void mostrar(Fila *f);
 
+void RotacaoEsquerda(ABB *arvore, EABB *x);
+
+void RotacaoDireita(ABB *arvore, EABB *y);
+
+int MAX(int x, int y);
+
+int altura(EABB *x);
+
+int fatorBalanceamento(EABB *x);
+
+void balanceie(ABB *arvore, EABB *x);
+
+int insere(ABB *arvore, Registro dados, int valor);
+
+//int remover(ABB *arvore, EABB *x);
+
+void imprimeInOrdem(EABB *raiz);
+
+void ordenar_por_ano(Lista *lista, ABB *arvore);
+
+void ordenar_por_mes(Lista *lista, ABB *arvore);
+
+void ordenar_por_dia(Lista *lista, ABB *arvore);
+
+void ordenar_por_idade(Lista *lista, ABB *arvore);
+
+void pesquisar(Lista *lista);
+
 void carregar_arquivo(Lista *lista);
 
 void salvar_arquivo(Lista *lista);

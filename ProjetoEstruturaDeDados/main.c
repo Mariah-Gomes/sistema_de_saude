@@ -19,7 +19,7 @@ int main() {
         }else if(opcao == 2){
             atendimento(lista);
         }else if(opcao == 3){
-            printf("Pesquisa...\n");
+            pesquisar(lista);
         }else if(opcao == 4){
             carregar_salvar(lista);
         }else if(opcao == 5){

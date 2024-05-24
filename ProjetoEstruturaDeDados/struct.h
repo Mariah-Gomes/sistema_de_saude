@@ -40,3 +40,16 @@ typedef struct{
     EFila *tail;
     int qtde;
 }Fila;
+
+typedef struct EABB{
+    Registro dados;
+    struct EABB *esq;
+    struct EABB *dir;
+    struct EABB *pai;
+    int valor;
+}EABB;
+
+typedef struct {
+    EABB *raiz;
+    int qtde;
+}ABB;

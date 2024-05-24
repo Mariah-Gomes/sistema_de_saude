@@ -1,6 +1,6 @@
 #include "struct.h"
 
-// funções menu:
+// FUNÇÕES MENU
 
 void menu();
 
@@ -10,8 +10,7 @@ void menu_atendimento();
 
 void sobre();
 
-
-// funções programa:
+// FUNÇÕES PROGRAMA
 
 Lista *inicializa_lista();
 

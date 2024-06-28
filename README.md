@@ -1,12 +1,10 @@
-# Título do projeto
-
-Antes mostra algumas informações do projeto
+# Sistema de Saúde
 
 > Status do projeto: Finalizado
 
-> Esse projeto nos foi proposto no 4ºSemestre na disciplina de Computação Móvel
+> Esse projeto nos foi proposto no 4ºSemestre na disciplina de Estrutura de Dados
 
-> Programamos inicialmente esse projeto no tinkercad juntos, depois passamos para a IDE do Arduino logo que fizemos isso subimos o arquivo do Arduino IDE no GitHub  
+> Programamos esse projeto estando presencialmente juntos 
 
 ### Tópicos
 
@@ -19,13 +17,14 @@ Antes mostra algumas informações do projeto
 🔹[Desenvolvedores](#busts_in_silhouette-desenvolvedores)
 
 ## :pencil: Descrição do Projeto
-Aqui a gente escreve um ou dois parágrafos explicando o projeto
+Nesse projeto nos foi proposto fazer um sistema de atendimento de saúde, incluindo algumas *operações* que aprendemos durante a aula, como fila, lista e árvore binária de busca. Esse sistema incluí cadastrar pacientes e algumas outras funcionalidades nessa questão que envolvem a *operação* lista, utilizamos a *operação* fila para a fila de atendimento, e árvore binária de busca para organizar os pacientes em ordem de dia de entrada, mês, ano e entre outros. Além, dessas funcionalidades esse sistema envolve carregar e salvar os dados em um arquivo.
 
 ## :mag_right: Funcionalidade
 Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a foto)
 
 ## :computer: Tecnologias Utilizadas
-Nesse espaço é descrita as tecnologias utilizadas utilizando tópicos (-)
+- Utilizamos a linguagem C
+- Programamos no CLion
 
 ## :busts_in_silhouette: Desenvolvedores
 | [<img loading="lazy" src="https://github.com/Mariah-Gomes/ProjetoCompMovel1/assets/141663285/e6827fd1-d8fe-4740-b6fc-fbbfccd05752" width=115><br><sub>Mariah Santos Gomes</sub>](https://github.com/Mariah-Gomes) | [<img loading="lazy" src="https://github.com/Mariah-Gomes/ProjetoCompMovel1/assets/141663285/66d7e656-b9e4-43b7-94fa-931b736df881" width=115><br><sub>Iago Rosa de Oliveira</sub>](https://github.com/iagorosa28) |

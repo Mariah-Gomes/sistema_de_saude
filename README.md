@@ -24,7 +24,7 @@ Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a fo
 
 1. Menu inicial:
 
-<div align="center">
+<div align="left">
    <img width=300 height=350 src="https://github.com/user-attachments/assets/c1602465-77e6-4750-908c-caccd6e8a5c3"/>
 </div>
 

@@ -43,7 +43,7 @@ Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a fo
 4. Menu de pesquisa:
 
 <div align="left">
-   <img width=300 height=350 src="https://github.com/user-attachments/assets/512b88b3-b6fe-41c7-bf70-2157e4fd547c"/>
+   <img width=325 height=350 src="https://github.com/user-attachments/assets/512b88b3-b6fe-41c7-bf70-2157e4fd547c"/>
 </div>
 
 5. Menu de manipulação de arquivo:

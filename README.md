@@ -49,7 +49,7 @@ Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a fo
 5. Menu de manipulação de arquivo:
 
 <div align="left">
-   <img width=250 height=300 src="https://github.com/user-attachments/assets/bcccae89-39f7-46ec-8717-06d0181dc715"/>
+   <img width=350 height=300 src="https://github.com/user-attachments/assets/bcccae89-39f7-46ec-8717-06d0181dc715"/>
 </div>
 
 6. Sobre.

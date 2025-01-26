@@ -31,7 +31,7 @@ Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a fo
 2. Menu de cadastro:
 
 <div align="left">
-   <img width=300 height=350 src="https://github.com/user-attachments/assets/83d287c3-4f9d-4d6a-b727-3c508babfa69"/>
+   <img width=350 height=350 src="https://github.com/user-attachments/assets/83d287c3-4f9d-4d6a-b727-3c508babfa69"/>
 </div>
 
 3. Menu de atendimento:

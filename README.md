@@ -25,7 +25,7 @@ Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a fo
 1. Menu inicial:
 
 <div align="center">
-   <img width=250 height=400 src="https://github.com/user-attachments/assets/c1602465-77e6-4750-908c-caccd6e8a5c3"/>
+   <img width=250 height=350 src="https://github.com/user-attachments/assets/c1602465-77e6-4750-908c-caccd6e8a5c3"/>
 </div>
 
 2. Menu de cadastro:

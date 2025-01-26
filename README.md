@@ -22,6 +22,19 @@ Nesse projeto nos foi proposto fazer um sistema de atendimento de saúde, inclui
 ## :mag_right: Funcionalidade
 Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a foto)
 
+1. Menu inicial:
+
+<div align="center">
+   <img width=400 height=250 src="https://github.com/user-attachments/assets/c1602465-77e6-4750-908c-caccd6e8a5c3"/>
+</div>
+
+2. Menu de cadastro:
+3. Menu de atendimento:
+4. Menu de pesquisa:
+5. Menu de manipulação de arquivo:
+6. Sobre.
+7. Sair.
+
 ## :computer: Tecnologias Utilizadas
 - Utilizamos a linguagem C
 - Programamos no CLion

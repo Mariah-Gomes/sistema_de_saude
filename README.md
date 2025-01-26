@@ -37,7 +37,7 @@ Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a fo
 3. Menu de atendimento:
 
 <div align="left">
-   <img width=300 height=350 src="https://github.com/user-attachments/assets/ead35ae8-da5a-474c-ab36-e90c604620e4"/>
+   <img width=325 height=350 src="https://github.com/user-attachments/assets/ead35ae8-da5a-474c-ab36-e90c604620e4"/>
 </div>
 
 4. Menu de pesquisa:

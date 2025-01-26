@@ -55,7 +55,7 @@ Aqui mostra as funcionalidades do projeto em tópicos (de numeração e com a fo
 6. Sobre.
 
 <div align="left">
-   <img width=350 height=300 src="https://github.com/user-attachments/assets/65e9ca88-f5d1-44ba-b467-be042deda8d0"/>
+   <img width=400 height=300 src="https://github.com/user-attachments/assets/65e9ca88-f5d1-44ba-b467-be042deda8d0"/>
 </div>
 
 ## :computer: Tecnologias Utilizadas
